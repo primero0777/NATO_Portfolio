@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/ephra/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.5.0/.claude/skills/ui-ux-pro-max/**)",
+      "Bash(python scripts/search.py \"developer portfolio fullstack minimal premium silicon valley\" --design-system -p \"NATO Portfolio\" -f markdown)"
+    ]
+  }
+}

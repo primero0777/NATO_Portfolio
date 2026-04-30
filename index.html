@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NATO Komi Ephraim — Développeur Fullstack Web & Mobile. Je conçois des applications web modernes, performantes et sécurisées." />
+  <meta name="keywords" content="développeur fullstack, web developer, mobile, React, JavaScript, HTML, CSS, Togo" />
+  <meta name="author" content="NATO Komi Ephraim" />
+  <meta property="og:title" content="NATO Komi Ephraim — Fullstack Developer" />
+  <meta property="og:description" content="Je conçois des applications web modernes, performantes et sécurisées." />
+  <meta property="og:type" content="website" />
+  <title>NATO Komi Ephraim — Fullstack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ LOADER ═══════════════════ -->
+  <div id="loader" role="status" aria-label="Chargement">
+    <div class="loader-inner">
+      <div class="loader-logo">NK</div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <header id="navbar" role="banner">
+    <nav class="nav-container" role="navigation" aria-label="Navigation principale">
+      <a href="#hero" class="nav-logo" aria-label="NATO Komi Ephraim – Accueil">NK<span class="accent">.</span></a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about"        class="nav-link" data-i18n="nav.about">À propos</a></li>
+        <li><a href="#skills"       class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+        <li><a href="#projects"     class="nav-link" data-i18n="nav.projects">Projets</a></li>
+        <li><a href="#services"     class="nav-link" data-i18n="nav.services">Services</a></li>
+        <li><a href="#experience"   class="nav-link" data-i18n="nav.experience">Expérience</a></li>
+        <li><a href="#blog"         class="nav-link" data-i18n="nav.blog">Blog</a></li>
+        <li><a href="#contact"      class="nav-link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="lang-toggle" class="btn-icon" aria-label="Changer de langue" title="Switch language">
+          <span id="lang-label">EN</span>
+        </button>
+        <button id="theme-toggle" class="btn-icon" aria-label="Basculer le mode sombre">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="#contact" class="btn-primary btn-sm" data-i18n="nav.hire">Me contacter</a>
+        <button id="menu-toggle" class="btn-icon hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true" role="dialog" aria-label="Menu mobile">
+      <ul role="list">
+        <li><a href="#about"      data-i18n="nav.about">À propos</a></li>
+        <li><a href="#skills"     data-i18n="nav.skills">Compétences</a></li>
+        <li><a href="#projects"   data-i18n="nav.projects">Projets</a></li>
+        <li><a href="#services"   data-i18n="nav.services">Services</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Expérience</a></li>
+        <li><a href="#blog"       data-i18n="nav.blog">Blog</a></li>
+        <li><a href="#contact"    data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ═══════════════════ HERO ═══════════════════ -->
+    <section id="hero" aria-label="Introduction">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge reveal-up" data-delay="0">
+          <span class="badge-dot" aria-hidden="true"></span>
+          <span data-i18n="hero.badge">Disponible pour des projets</span>
+        </div>
+        <h1 class="hero-title reveal-up" data-delay="1">
+          <span data-i18n="hero.greeting">Bonjour, je suis</span><br />
+          <span class="hero-name">NATO Komi Ephraim</span>
+        </h1>
+        <p class="hero-subtitle reveal-up" data-delay="2">
+          <span class="typewriter" id="typewriter" aria-live="polite"></span>
+        </p>
+        <p class="hero-tagline reveal-up" data-delay="3" data-i18n="hero.tagline">
+          Je conçois des applications web modernes, performantes et sécurisées.
+        </p>
+        <div class="hero-actions reveal-up" data-delay="4">
+          <a href="#projects" class="btn-primary" data-i18n="hero.cta1">Voir mes projets</a>
+          <a href="#contact"  class="btn-ghost"   data-i18n="hero.cta2">Me contacter</a>
+        </div>
+        <div class="hero-scroll reveal-up" data-delay="5" aria-hidden="true">
+          <div class="scroll-indicator"><div class="scroll-dot"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ ABOUT ═══════════════════ -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrap reveal-left">
+            <div class="about-image" role="img" aria-label="Photo de NATO Komi Ephraim">
+              <div class="about-avatar" aria-hidden="true">NK</div>
+              <div class="about-badge-card" aria-hidden="true">
+                <span class="about-badge-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <div>
+                  <strong data-i18n="about.card1.title">3+ ans</strong>
+                  <span data-i18n="about.card1.sub">d'expérience</span>
+                </div>
+              </div>
+              <div class="about-badge-card about-badge-card-2" aria-hidden="true">
+                <span class="about-badge-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </span>
+                <div>
+                  <strong data-i18n="about.card2.title">6 projets</strong>
+                  <span data-i18n="about.card2.sub">livrés</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-text reveal-right">
+            <div class="section-label" data-i18n="about.label">À propos de moi</div>
+            <h2 id="about-title" data-i18n="about.title">Passionné par le code<br/>et le design.</h2>
+            <p data-i18n="about.p1">Je suis NATO Komi Ephraim, développeur fullstack basé au Togo. Je crée des expériences numériques élégantes, performantes et centrées sur l'utilisateur — du concept au déploiement.</p>
+            <p data-i18n="about.p2">Mon objectif est de travailler avec des startups et entreprises ambitieuses, aussi bien localement qu'à l'international, pour transformer leurs idées en produits digitaux impactants.</p>
+            <p data-i18n="about.p3">Je m'inspire des meilleures pratiques de la Silicon Valley : code propre, design moderne, et livraison rapide.</p>
+            <div class="about-stats">
+              <div class="stat"><span class="stat-num" data-count="20">0</span><span class="stat-plus">+</span><span data-i18n="about.stat1">Clients</span></div>
+              <div class="stat"><span class="stat-num" data-count="6">0</span><span class="stat-plus">+</span><span data-i18n="about.stat2">Projets</span></div>
+              <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-plus">+</span><span data-i18n="about.stat3">Ans XP</span></div>
+            </div>
+            <a href="images/CV_NATO_Komi_Ephraim.pdf" download class="btn-primary" data-i18n="about.cv">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Télécharger CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ SKILLS ═══════════════════ -->
+    <section id="skills" class="bg-alt" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-label" data-i18n="skills.label">Compétences</div>
+          <h2 id="skills-title" data-i18n="skills.title">Technologies<br/>maîtrisées.</h2>
+          <p class="section-desc" data-i18n="skills.desc">Des outils modernes pour créer des produits de qualité.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Core -->
+          <div class="skill-card reveal-up" data-delay="0">
+            <div class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 128 128" width="36" height="36"><path fill="#E44D26" d="M9.032 2l10.005 112.093 44.896 12.401 45.02-12.387L119.968 2H9.032z"/><path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64v105.964z"/><path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64V52.455z"/><path fill="#fff" d="M64 88.198l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017V88.198z"/><path fill="#EBEBEB" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.336-3.696h-3.708H63.952z"/><path fill="#fff" d="M63.952 24.599v13.762H98.16l.277-3.092.628-6.978.329-3.692H63.952z"/></svg>
+            </div>
+            <h3>HTML5</h3>
+            <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 90%">
+              <div class="skill-fill" data-width="90"></div>
+            </div>
+            <span class="skill-pct">90%</span>
+          </div>
+
+          <div class="skill-card reveal-up" data-delay="1">
+            <div class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 128 128" width="36" height="36"><path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"/><path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354H64.001v106.49z"/><path fill="#fff" d="M64.001 51.429H48.28l-1.156-12.968H64.001V25.414H34.327l.32 3.544 3.262 36.544H64.001V51.429z"/><path fill="#EBEBEB" d="M64.001 91.817l-.061.018-15.327-4.14-.979-10.975H34.8l1.928 21.609 27.181 7.536.092-.025V91.817z"/><path fill="#fff" d="M64.001 51.429v13.047h14.583l-1.373 15.402-13.21 3.567v13.526l24.375-6.735.18-1.993 2.809-31.4.293-3.297H64.001z"/><path fill="#EBEBEB" d="M64.001 25.414v13.047h28.056l.233-2.609.528-5.984.261-4.454H64.001z"/></svg>
+            </div>
+            <h3>CSS3</h3>
+            <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 85%">
+              <div class="skill-fill" data-width="85"></div>
+            </div>
+            <span class="skill-pct">85%</span>
+          </div>
+
+          <div class="skill-card reveal-up" data-delay="2">
+            <div class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 128 128" width="36" height="36"><path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"/><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"/></svg>
+            </div>
+            <h3>JavaScript</h3>
+            <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript 80%">
+              <div class="skill-fill" data-width="80"></div>
+            </div>
+            <span class="skill-pct">80%</span>
+          </div>
+
+          <div class="skill-card reveal-up" data-delay="3">
+            <div class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 128 128" width="36" height="36"><path fill="#00758F" d="M116.948 39.858c-2.089-3.554-5.015-5.315-8.738-5.315a8.73 8.73 0 00-4.273 1.055 9.032 9.032 0 00-3.125 2.892c-.745 1.157-1.293 2.52-1.64 4.09-.307 1.504-.461 3.11-.461 4.824 0 3.705.847 6.666 2.543 8.88 1.692 2.215 4.124 3.323 7.285 3.323 2.021 0 3.8-.547 5.334-1.638 1.539-1.094 2.796-2.726 3.77-4.9h-7.73v-5.84h14.11v18.63h-5.154l-.825-4.32c-1.42 1.73-2.947 3.003-4.577 3.814-1.634.811-3.597 1.218-5.894 1.218-3.006 0-5.66-.558-7.963-1.674-2.303-1.116-4.233-2.676-5.786-4.683-1.554-2.004-2.715-4.368-3.487-7.09-.77-2.723-1.155-5.699-1.155-8.929 0-3.14.416-6.063 1.244-8.775.83-2.714 2.021-5.091 3.578-7.136 1.557-2.042 3.474-3.641 5.755-4.797 2.277-1.157 4.852-1.735 7.72-1.735 4.566 0 8.22 1.168 10.958 3.501 2.74 2.338 4.472 5.709 5.198 10.12h-7.457z"/><path fill="#00758F" d="M60.17 56.7v6.11h-25.3V23.6h24.53v6.11H41.73v10.2h15.63v5.84H41.73V56.7z"/><path fill="#E48E00" d="M87.37 62.81c-3.27 0-6.098-.658-8.484-1.97-2.39-1.318-4.286-3.139-5.69-5.467-1.4-2.331-2.1-5.035-2.1-8.108 0-3.073.7-5.78 2.1-8.108 1.404-2.328 3.3-4.148 5.69-5.466 2.386-1.314 5.215-1.97 8.484-1.97 3.27 0 6.098.656 8.484 1.97 2.387 1.318 4.282 3.138 5.69 5.466 1.404 2.328 2.1 5.035 2.1 8.108 0 3.073-.696 5.777-2.1 8.108-1.408 2.328-3.303 4.149-5.69 5.467-2.386 1.312-5.215 1.97-8.484 1.97zm0-5.997c1.898 0 3.487-.46 4.77-1.38 1.282-.92 2.24-2.18 2.875-3.775.632-1.593.949-3.375.949-5.343 0-1.97-.317-3.75-.949-5.344-.635-1.593-1.593-2.854-2.875-3.774-1.283-.92-2.872-1.38-4.77-1.38-1.9 0-3.49.46-4.77 1.38-1.283.92-2.24 2.18-2.874 3.774-.635 1.595-.952 3.374-.952 5.344 0 1.968.317 3.75.952 5.343.633 1.595 1.59 2.855 2.874 3.775 1.28.92 2.87 1.38 4.77 1.38z"/></svg>
+            </div>
+            <h3>MySQL</h3>
+            <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="MySQL 75%">
+              <div class="skill-fill" data-width="75"></div>
+            </div>
+            <span class="skill-pct">75%</span>
+          </div>
+
+          <div class="skill-card reveal-up" data-delay="4">
+            <div class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 128 128" width="36" height="36"><path d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64 64-28.7 64-64S99.3 0 64 0z" fill="#00D8FF"/><path d="M64 35.5c-15.7 0-29.8 2.1-40.1 5.5-8.6 2.9-14 6.9-14 10.7 0 3.9 5.7 8.1 15.3 11.1 10.1 3.1 23.4 4.8 37.8 4.8s27.7-1.7 37.8-4.8c9.6-3 15.3-7.2 15.3-11.1 0-3.8-5.4-7.8-14-10.7C93.8 37.6 79.7 35.5 64 35.5z" fill="#222"/>  <path d="M45.7 70.7c-7.8-13.6-11.2-27-8.9-36.7 1.9-8.3 7.2-13.2 11-15.4 3.4-2 9.7-3.8 17.5-1.9 9.1 2.2 19.1 9.2 27.2 20.7 7.9 11.2 12.2 24.1 11.4 35-.7 9.2-5.3 16.2-12.9 20.6-6.7 4-15.2 4.4-23.5 1.1-10.6-4.3-18.5-12.8-22.8-23.4z" fill="#00D8FF" opacity=".6"/><circle cx="64" cy="64" r="10.5" fill="#00D8FF"/></svg>
+            </div>
+            <h3>React</h3>
+            <p class="skill-note" data-i18n="skills.notions">Notions</p>
+            <div class="skill-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" aria-label="React 45%">
+              <div class="skill-fill" data-width="45"></div>
+            </div>
+            <span class="skill-pct">45%</span>
+          </div>
+
+          <div class="skill-card reveal-up" data-delay="5">
+            <div class="skill-icon" aria-hidden="true">
+              <svg viewBox="0 0 128 128" width="36" height="36"><path fill="#777BB3" d="M64 0C28.654 0 0 28.654 0 64s28.654 64 64 64 64-28.654 64-64S99.346 0 64 0z"/><path fill="#fff" d="M22.963 95.504l4.037-20.358c.965-4.851 2.134-9.594 3.038-14.479.185-1.007-.235-1.42-1.01-1.81-1.56-.78-3.147-1.517-4.822-2.188l.782-3.918c4.25-1.21 8.41-2.418 12.726-2.888 1.893-.205 3.71.322 4.236 2.527.326 1.369.444 2.793.652 4.196l.516-.034c3.42-5.22 7.94-8.262 14.21-8.27 6.147-.009 9.487 3.607 9.936 10.108.17 2.444-.263 4.983-.702 7.433-1.16 6.443-2.415 12.875-3.596 19.317-.203 1.107.102 1.538 1.22 1.752 1.16.222 2.303.527 3.476.804l-.773 3.848c-5.55.607-11.054 1.175-16.628.347l3.957-21.263c.44-2.368.92-4.733 1.219-7.12.285-2.257-.493-3.413-2.327-3.698-3.097-.48-5.891 1.245-7.942 4.45-.767 1.205-1.27 2.68-1.567 4.104-1.433 6.883-2.832 13.776-4.1 20.69-.367 2.008-1.073 2.772-3.15 2.655-2.867-.159-5.75-.037-8.366-.037zM97.42 48.108c-4.24.025-7.39-3.003-7.36-7.102.028-4.07 3.3-7.269 7.472-7.276 4.195-.007 7.405 3.098 7.384 7.152-.02 4.066-3.27 7.202-7.496 7.226z"/></svg>
+            </div>
+            <h3>PHP</h3>
+            <p class="skill-note" data-i18n="skills.notions">Notions</p>
+            <div class="skill-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" aria-label="PHP 40%">
+              <div class="skill-fill" data-width="40"></div>
+            </div>
+            <span class="skill-pct">40%</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="tools-row reveal-up">
+          <div class="section-label" data-i18n="skills.tools">Outils & Environnements</div>
+          <div class="tools-list" role="list">
+            <span role="listitem">Git & GitHub</span>
+            <span role="listitem">VS Code</span>
+            <span role="listitem">Figma</span>
+            <span role="listitem">WAMP</span>
+            <span role="listitem">Responsive Design</span>
+            <span role="listitem">SEO</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ PROJECTS ═══════════════════ -->
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-label" data-i18n="projects.label">Projets</div>
+          <h2 id="projects-title" data-i18n="projects.title">Réalisations<br/>récentes.</h2>
+          <p class="section-desc" data-i18n="projects.desc">Des projets réels, livrés, utilisés.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card reveal-up" data-delay="0">
+            <div class="project-img" style="--proj-color:#6366f1" role="img" aria-label="Aperçu Générateur de CV">
+              <div class="project-mockup">
+                <div class="pm-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="pm-content" aria-hidden="true">
+                  <div class="pm-line w-70"></div>
+                  <div class="pm-line w-50"></div>
+                  <div class="pm-line w-80"></div>
+                  <div class="pm-line w-40"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <h3 data-i18n="projects.p1.title">Générateur de CV</h3>
+              <p data-i18n="projects.p1.desc">Application web permettant de créer un CV professionnel automatiquement avec export PDF.</p>
+              <div class="project-actions">
+                <a href="https://github.com/ephraimnato" target="_blank" rel="noopener noreferrer" class="btn-ghost btn-sm" data-i18n="projects.code">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  Code
+                </a>
+                <a href="#" class="btn-primary btn-sm" data-i18n="projects.demo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Démo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-delay="1">
+            <div class="project-img" style="--proj-color:#0ea5e9" role="img" aria-label="Aperçu FINEX Pro">
+              <div class="project-mockup">
+                <div class="pm-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="pm-content" aria-hidden="true">
+                  <div class="pm-heading" aria-hidden="true"></div>
+                  <div class="pm-line w-60"></div>
+                  <div class="pm-card" aria-hidden="true"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span>
+              </div>
+              <h3 data-i18n="projects.p2.title">FINEX Pro</h3>
+              <p data-i18n="projects.p2.desc">Site d'impression professionnelle avec catalogue produits, devis en ligne et gestion des commandes.</p>
+              <div class="project-actions">
+                <a href="https://github.com/ephraimnato" target="_blank" rel="noopener noreferrer" class="btn-ghost btn-sm" data-i18n="projects.code">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  Code
+                </a>
+                <a href="#" class="btn-primary btn-sm" data-i18n="projects.demo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Démo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-delay="2">
+            <div class="project-img" style="--proj-color:#f59e0b" role="img" aria-label="Aperçu ALA Group">
+              <div class="project-mockup">
+                <div class="pm-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="pm-content" aria-hidden="true">
+                  <div class="pm-grid" aria-hidden="true">
+                    <div></div><div></div><div></div><div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <h3 data-i18n="projects.p3.title">ALA Group</h3>
+              <p data-i18n="projects.p3.desc">Site vitrine pour une entreprise d'architecture intérieure et extérieure avec galerie de réalisations.</p>
+              <div class="project-actions">
+                <a href="https://github.com/ephraimnato" target="_blank" rel="noopener noreferrer" class="btn-ghost btn-sm" data-i18n="projects.code">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  Code
+                </a>
+                <a href="#" class="btn-primary btn-sm" data-i18n="projects.demo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Démo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-delay="3">
+            <div class="project-img" style="--proj-color:#8b5cf6" role="img" aria-label="Aperçu AFRICA Wine Food">
+              <div class="project-mockup">
+                <div class="pm-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="pm-content" aria-hidden="true">
+                  <div class="pm-products" aria-hidden="true">
+                    <div></div><div></div><div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>MySQL</span>
+              </div>
+              <h3 data-i18n="projects.p4.title">AFRICA Wine Food</h3>
+              <p data-i18n="projects.p4.desc">Plateforme e-commerce spécialisée dans la vente de vins et spiritueux avec panier et paiement en ligne.</p>
+              <div class="project-actions">
+                <a href="https://github.com/ephraimnato" target="_blank" rel="noopener noreferrer" class="btn-ghost btn-sm" data-i18n="projects.code">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  Code
+                </a>
+                <a href="#" class="btn-primary btn-sm" data-i18n="projects.demo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Démo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-delay="4">
+            <div class="project-img" style="--proj-color:#10b981" role="img" aria-label="Aperçu AD Wessome Temple">
+              <div class="project-mockup">
+                <div class="pm-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="pm-content" aria-hidden="true">
+                  <div class="pm-hero-mock" aria-hidden="true"></div>
+                  <div class="pm-line w-60"></div>
+                  <div class="pm-line w-40"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <h3 data-i18n="projects.p5.title">AD Wessome Temple</h3>
+              <p data-i18n="projects.p5.desc">Site vitrine pour l'église Maranatha avec agenda, événements et formulaire de contact.</p>
+              <div class="project-actions">
+                <a href="https://github.com/ephraimnato" target="_blank" rel="noopener noreferrer" class="btn-ghost btn-sm" data-i18n="projects.code">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  Code
+                </a>
+                <a href="#" class="btn-primary btn-sm" data-i18n="projects.demo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Démo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-delay="5">
+            <div class="project-img" style="--proj-color:#f43f5e" role="img" aria-label="Aperçu MiabeTrans">
+              <div class="project-mockup">
+                <div class="pm-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="pm-content" aria-hidden="true">
+                  <div class="pm-map" aria-hidden="true">
+                    <div class="pm-route"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>MySQL</span>
+              </div>
+              <h3 data-i18n="projects.p6.title">MiabeTrans</h3>
+              <p data-i18n="projects.p6.desc">Plateforme de transport interurbain avec réservation de billets, suivi des voyages et paiement mobile.</p>
+              <div class="project-actions">
+                <a href="https://github.com/ephraimnato" target="_blank" rel="noopener noreferrer" class="btn-ghost btn-sm" data-i18n="projects.code">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  Code
+                </a>
+                <a href="#" class="btn-primary btn-sm" data-i18n="projects.demo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Démo
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ SERVICES ═══════════════════ -->
+    <section id="services" class="bg-alt" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-label" data-i18n="services.label">Services</div>
+          <h2 id="services-title" data-i18n="services.title">Ce que je<br/>peux faire.</h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal-up" data-delay="0">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 data-i18n="services.s1.title">Sites Web</h3>
+            <p data-i18n="services.s1.desc">Création de sites vitrines, landing pages et e-commerce modernes, rapides et optimisés SEO.</p>
+            <ul class="service-list" aria-label="Inclus dans ce service">
+              <li data-i18n="services.s1.f1">Design sur-mesure</li>
+              <li data-i18n="services.s1.f2">100% responsive</li>
+              <li data-i18n="services.s1.f3">Optimisation SEO</li>
+            </ul>
+          </div>
+          <div class="service-card service-card-featured reveal-up" data-delay="1">
+            <div class="service-badge" data-i18n="services.popular">Populaire</div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 data-i18n="services.s2.title">Applications Web</h3>
+            <p data-i18n="services.s2.desc">Développement d'applications web complexes avec base de données, authentification et tableau de bord.</p>
+            <ul class="service-list" aria-label="Inclus dans ce service">
+              <li data-i18n="services.s2.f1">Frontend + Backend</li>
+              <li data-i18n="services.s2.f2">Base de données</li>
+              <li data-i18n="services.s2.f3">API & intégrations</li>
+            </ul>
+          </div>
+          <div class="service-card reveal-up" data-delay="2">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+            </div>
+            <h3 data-i18n="services.s3.title">UI/UX Design</h3>
+            <p data-i18n="services.s3.desc">Conception d'interfaces élégantes et intuitives centrées sur l'expérience utilisateur.</p>
+            <ul class="service-list" aria-label="Inclus dans ce service">
+              <li data-i18n="services.s3.f1">Maquettes Figma</li>
+              <li data-i18n="services.s3.f2">Prototypage interactif</li>
+              <li data-i18n="services.s3.f3">Design system</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ EXPERIENCE / TIMELINE ═══════════════════ -->
+    <section id="experience" aria-labelledby="exp-title">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-label" data-i18n="exp.label">Parcours</div>
+          <h2 id="exp-title" data-i18n="exp.title">Mon évolution.</h2>
+        </div>
+        <div class="timeline" role="list">
+          <div class="timeline-item reveal-up" data-delay="0" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-date" data-i18n="exp.e1.date">2024 — Présent</div>
+              <h3 data-i18n="exp.e1.title">Développeur Fullstack Freelance</h3>
+              <p class="timeline-company" data-i18n="exp.e1.company">Indépendant · Togo & International</p>
+              <p data-i18n="exp.e1.desc">Conception et développement de solutions web complètes pour clients locaux et internationaux. Gestion de projets de A à Z, du design au déploiement.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal-up" data-delay="1" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-date" data-i18n="exp.e2.date">2023</div>
+              <h3 data-i18n="exp.e2.title">Développeur Web Junior</h3>
+              <p class="timeline-company" data-i18n="exp.e2.company">Projets personnels & associatifs</p>
+              <p data-i18n="exp.e2.desc">Développement de mes premiers projets professionnels : sites vitrine, e-commerce et applications métier. Apprentissage approfondi de JavaScript et MySQL.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal-up" data-delay="2" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-date" data-i18n="exp.e3.date">2022</div>
+              <h3 data-i18n="exp.e3.title">Formation Développement Web</h3>
+              <p class="timeline-company" data-i18n="exp.e3.company">Auto-formation · Togo</p>
+              <p data-i18n="exp.e3.desc">Maîtrise des fondamentaux : HTML5, CSS3, JavaScript ES6+. Construction des premières applications web et découverte du design responsive.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal-up" data-delay="3" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-date" data-i18n="exp.e4.date">2021</div>
+              <h3 data-i18n="exp.e4.title">Début du Voyage</h3>
+              <p class="timeline-company" data-i18n="exp.e4.company">Curiosité & passion</p>
+              <p data-i18n="exp.e4.desc">Première ligne de code écrite. Découverte de la programmation web, de l'algorithmique et de la logique informatique. Une passion instantanée.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ BLOG ═══════════════════ -->
+    <section id="blog" class="bg-alt" aria-labelledby="blog-title">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-label" data-i18n="blog.label">Blog</div>
+          <h2 id="blog-title" data-i18n="blog.title">Mes derniers<br/>articles.</h2>
+          <p class="section-desc" data-i18n="blog.desc">Réflexions sur le développement web, le design et la tech.</p>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card reveal-up" data-delay="0">
+            <div class="blog-img blog-img-1" role="img" aria-label="Article: CSS moderne"></div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-cat" data-i18n="blog.cat.css">CSS</span>
+                <time datetime="2025-03-15" data-i18n="blog.date1">15 Mars 2025</time>
+              </div>
+              <h3 data-i18n="blog.b1.title">CSS Grid vs Flexbox : Quand utiliser quoi ?</h3>
+              <p data-i18n="blog.b1.desc">Un guide pratique pour choisir entre Grid et Flexbox selon vos besoins de mise en page.</p>
+              <a href="#" class="blog-link" data-i18n="blog.read">
+                Lire l'article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+          <article class="blog-card reveal-up" data-delay="1">
+            <div class="blog-img blog-img-2" role="img" aria-label="Article: Performance web"></div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-cat" data-i18n="blog.cat.perf">Performance</span>
+                <time datetime="2025-02-28" data-i18n="blog.date2">28 Fév 2025</time>
+              </div>
+              <h3 data-i18n="blog.b2.title">10 astuces pour booster la performance de votre site</h3>
+              <p data-i18n="blog.b2.desc">Des techniques concrètes pour accélérer le chargement et améliorer le score Lighthouse.</p>
+              <a href="#" class="blog-link" data-i18n="blog.read">
+                Lire l'article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+          <article class="blog-card reveal-up" data-delay="2">
+            <div class="blog-img blog-img-3" role="img" aria-label="Article: Freelance tips"></div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-cat" data-i18n="blog.cat.free">Freelance</span>
+                <time datetime="2025-01-20" data-i18n="blog.date3">20 Jan 2025</time>
+              </div>
+              <h3 data-i18n="blog.b3.title">Trouver ses premiers clients freelance en Afrique</h3>
+              <p data-i18n="blog.b3.desc">Mon expérience et mes conseils pour démarrer une activité freelance dans le domaine tech.</p>
+              <a href="#" class="blog-link" data-i18n="blog.read">
+                Lire l'article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ TESTIMONIALS ═══════════════════ -->
+    <section id="testimonials" aria-labelledby="testi-title">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-label" data-i18n="testi.label">Témoignages</div>
+          <h2 id="testi-title" data-i18n="testi.title">Ce que disent<br/>mes clients.</h2>
+        </div>
+        <div class="testi-grid">
+          <blockquote class="testi-card reveal-up" data-delay="0">
+            <div class="testi-stars" aria-label="5 étoiles sur 5" role="img">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p data-i18n="testi.t1.text">"NATO a livré notre site e-commerce en temps record, avec un design qui a dépassé toutes nos attentes. Son sens du détail et sa réactivité sont remarquables."</p>
+            <footer class="testi-author">
+              <div class="testi-avatar" aria-hidden="true">AK</div>
+              <div>
+                <cite data-i18n="testi.t1.name">Ama Kofi</cite>
+                <span data-i18n="testi.t1.role">Directrice, AFRICA Wine Food</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testi-card reveal-up" data-delay="1">
+            <div class="testi-stars" aria-label="5 étoiles sur 5" role="img">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p data-i18n="testi.t2.text">"Excellent travail sur notre plateforme de transport. La solution est robuste, intuitive et nos utilisateurs adorent l'interface. Je recommande NATO sans hésitation."</p>
+            <footer class="testi-author">
+              <div class="testi-avatar" aria-hidden="true">KB</div>
+              <div>
+                <cite data-i18n="testi.t2.name">Koffi Bérenger</cite>
+                <span data-i18n="testi.t2.role">CEO, MiabeTrans</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testi-card reveal-up" data-delay="2">
+            <div class="testi-stars" aria-label="5 étoiles sur 5" role="img">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p data-i18n="testi.t3.text">"Notre site d'architecture reflète parfaitement l'identité de notre marque. NATO comprend les enjeux business au-delà du code. Un vrai partenaire de confiance."</p>
+            <footer class="testi-author">
+              <div class="testi-avatar" aria-hidden="true">LA</div>
+              <div>
+                <cite data-i18n="testi.t3.name">Lamine Adjoa</cite>
+                <span data-i18n="testi.t3.role">Fondateur, ALA Group</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ CONTACT ═══════════════════ -->
+    <section id="contact" class="bg-alt" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-label" data-i18n="contact.label">Contact</div>
+          <h2 id="contact-title" data-i18n="contact.title">Travaillons<br/>ensemble.</h2>
+          <p class="section-desc" data-i18n="contact.desc">Un projet en tête ? Je réponds sous 24h.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal-left">
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <span class="contact-label" data-i18n="contact.email.label">Email</span>
+                <a href="mailto:ephraimnato17@gmail.com" class="contact-value">ephraimnato17@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.86 2 2 0 0 1 3.58 2.68h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.29a16 16 0 0 0 6 6l1.77-1.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <span class="contact-label" data-i18n="contact.phone.label">WhatsApp</span>
+                <a href="https://wa.me/22892978659" target="_blank" rel="noopener noreferrer" class="contact-value">+228 92 97 86 59</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </div>
+              <div>
+                <span class="contact-label">Telegram</span>
+                <a href="https://t.me/El_primero177" target="_blank" rel="noopener noreferrer" class="contact-value">@El_primero177</a>
+              </div>
+            </div>
+            <div class="contact-social">
+              <a href="https://github.com/ephraimnato" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+              <a href="https://wa.me/22892978659" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.86 2 2 0 0 1 3.58 2.68h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.29a16 16 0 0 0 6 6l1.77-1.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <form id="contact-form" class="contact-form reveal-right" novalidate aria-label="Formulaire de contact">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-name" data-i18n="contact.form.name">Nom complet</label>
+                <input type="text" id="f-name" name="name" autocomplete="name" required
+                  placeholder="John Doe" aria-required="true" />
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="f-email" data-i18n="contact.form.email">Email</label>
+                <input type="email" id="f-email" name="email" autocomplete="email" required
+                  placeholder="john@example.com" aria-required="true" />
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="f-subject" data-i18n="contact.form.subject">Sujet</label>
+              <input type="text" id="f-subject" name="subject" required
+                placeholder="Nouveau projet" aria-required="true" />
+              <span class="form-error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="f-message" data-i18n="contact.form.message">Message</label>
+              <textarea id="f-message" name="message" rows="5" required
+                placeholder="Décrivez votre projet..." aria-required="true"></textarea>
+              <span class="form-error" role="alert" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="btn-primary btn-full" id="submit-btn">
+              <span data-i18n="contact.form.send">Envoyer le message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <div id="form-success" class="form-success" role="status" aria-live="polite" hidden>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="contact.form.success">Message envoyé avec succès !</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">NK<span class="accent">.</span></div>
+          <p data-i18n="footer.tagline">Développeur Fullstack passionné,<br/>basé au Togo.</p>
+          <div class="footer-social">
+            <a href="https://github.com/ephraimnato" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="https://wa.me/22892978659" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.86 2 2 0 0 1 3.58 2.68h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.29a16 16 0 0 0 6 6l1.77-1.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.nav">Navigation</h4>
+          <ul role="list">
+            <li><a href="#about"      data-i18n="nav.about">À propos</a></li>
+            <li><a href="#skills"     data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="#projects"   data-i18n="nav.projects">Projets</a></li>
+            <li><a href="#services"   data-i18n="nav.services">Services</a></li>
+            <li><a href="#blog"       data-i18n="nav.blog">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.contact">Contact</h4>
+          <ul role="list">
+            <li><a href="mailto:ephraimnato17@gmail.com">ephraimnato17@gmail.com</a></li>
+            <li><a href="https://wa.me/22892978659" target="_blank" rel="noopener noreferrer">+228 92 97 86 59</a></li>
+            <li><a href="https://t.me/el_primero177" target="_blank" rel="noopener noreferrer">@el_primero177</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> NATO Komi Ephraim. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+        <p data-i18n="footer.made">Conçu & développé avec passion.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Retour en haut de page" hidden>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
