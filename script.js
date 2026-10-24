@@ -1,4 +1,12 @@
 (function(){
+  var fab = document.getElementById('fab');
+  if (fab){
+    var heroEl = document.querySelector('.cover'), contactEl = document.getElementById('contact');
+    var contactIn = false;
+    if ('IntersectionObserver' in window && contactEl){ new IntersectionObserver(function(es){ contactIn = es[0].isIntersecting; tick(); }, { threshold: 0.05 }).observe(contactEl); }
+    var tick = function(){ var past = window.scrollY > (heroEl ? heroEl.offsetHeight * 0.7 : 500); fab.classList.toggle('show', past && !contactIn); };
+    window.addEventListener('scroll', tick, { passive: true }); tick();
+  }
   var burger = document.getElementById('burger');
   if (burger){
     var setMenu = function(open){ document.documentElement.classList.toggle('menu-open', open); burger.setAttribute('aria-expanded', open ? 'true' : 'false'); burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu'); };
