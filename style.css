@@ -175,18 +175,21 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:80;opa
 
 /* ---------- Écrans moyens et mobiles ---------- */
 @media (max-width:980px){
-  .menu{display:none}
   .cover .wrap{grid-template-columns:1fr;grid-template-rows:auto}
-  .name{grid-row:auto;font-size:clamp(72px,24vw,200px)}
+  .name{grid-row:auto;font-size:clamp(72px,27.5vw,270px)}
   .intro{grid-row:auto;padding-bottom:40px}
-  .portrait{grid-column:1;grid-row:auto;height:auto;max-width:440px;width:100%;justify-self:center}
-  .portrait img{height:auto;width:100%}
+  .portrait{grid-column:1;grid-row:auto;height:min(58vh,480px);width:100%;max-width:none;justify-self:stretch;margin-top:-6px}
+  .portrait .block{left:12%;right:12%;height:70%}
+  .portrait img{height:100%;width:auto}
+  .portrait figcaption{right:calc(12% + 12px)}
   .about-grid,.contact-grid{grid-template-columns:1fr}
   .svc li{grid-template-columns:1fr}
   .svc .tagline{white-space:normal}
-  .project a{grid-template-columns:44px minmax(0,1fr) 48px}
-  .p-what{grid-column:2/4}
-  .p-go{grid-column:3;grid-row:1;width:44px;height:44px}
+  .project a{grid-template-columns:minmax(0,1fr) 48px;gap:10px 16px;padding:26px 0}
+  .p-num{grid-column:1/-1;grid-row:1}
+  .p-name{grid-column:1;grid-row:2;font-size:clamp(38px,12vw,64px)}
+  .p-go{grid-column:2;grid-row:2;width:46px;height:46px}
+  .p-what{grid-column:1/-1}
   .thumb{display:block;grid-column:1/-1;height:auto;aspect-ratio:16/10;border-radius:6px}
   .peek{display:none}
   .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -200,4 +203,30 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:80;opa
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+/* ---------- Menu mobile ---------- */
+.burger{display:none;align-items:center;justify-content:center;width:48px;height:48px;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--bone);cursor:pointer}
+.burger span{display:block;width:18px;height:1.5px;background:currentColor;position:relative;transition:background .2s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:1.5px;background:currentColor;transition:transform .3s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.menu-open .burger span{background:transparent}
+.menu-open .burger span::before{transform:translateY(6px) rotate(45deg)}
+.menu-open .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+.nav-right{display:flex;align-items:center;gap:10px}
+@media (max-width:980px){
+  .burger{display:inline-flex}
+  .menu{display:flex;position:fixed;inset:0;z-index:-1;flex-direction:column;justify-content:center;gap:6px;padding:100px max(24px,env(safe-area-inset-left,0px)) 40px;background:var(--ink);opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+  .menu a{font:400 clamp(48px,15vw,88px)/1.05 var(--f-display);letter-spacing:0;color:var(--bone);padding:6px 0;border-bottom:1px solid var(--line)}
+  .menu a:last-child{color:var(--orange)}
+  .menu-open .menu{opacity:1;visibility:visible}
+  .menu-open{overflow:hidden}
+  .nav{z-index:50}
+}
+@media (hover:none){
+  .project a:hover .p-name{color:inherit;transform:none}
+  .project a:hover .p-go{background:transparent;border-color:var(--line);transform:none}
+  .svc li:hover{padding-left:0}
+  .svc li:hover h3{color:inherit}
+  .project a:active .p-name{color:var(--orange)}
 }

@@ -1,4 +1,12 @@
 (function(){
+  var burger = document.getElementById('burger');
+  if (burger){
+    var setMenu = function(open){ document.documentElement.classList.toggle('menu-open', open); burger.setAttribute('aria-expanded', open ? 'true' : 'false'); burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu'); };
+    burger.addEventListener('click', function(){ setMenu(!document.documentElement.classList.contains('menu-open')); });
+    document.querySelectorAll('#menu a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setMenu(false); });
+  }
+
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- FR / EN ---------- */
@@ -81,7 +89,7 @@
     .from('.portrait .block', { scaleY: 0, duration: 1.1, ease: 'power4.out' }, .25)
     .from('.portrait img', { yPercent: 12, duration: 1.4 }, .4)
     .from('.intro > *', { y: 24, duration: 1, stagger: .08 }, .6)
-    .from('.nav .wrap > *', { y: -14, duration: .8, stagger: .05 }, .2);
+    .from('.nav .wrap > *', { y: -14, duration: .8, stagger: .05, clearProps: 'transform' }, .2);
 
   /* Le portrait monte un peu plus lentement que la page */
   gsap.to('.portrait img', { yPercent: -6, ease: 'none',
