@@ -13,9 +13,8 @@
     nodes.forEach(function(n){ n.innerHTML = lang === 'en' ? n.dataset.en : n.dataset.fr; });
     phs.forEach(function(n){ n.placeholder = lang === 'en' ? n.dataset.enPh : n.dataset.frPh; });
     document.documentElement.lang = lang;
-    btn.innerHTML = lang === 'en' ? '<b>EN</b> <i>/ FR</i>' : '<b>FR</b> <i>/ EN</i>';
+    btn.innerHTML = lang === 'en' ? 'EN <i>/ FR</i>' : 'FR <i>/ EN</i>';
     btn.setAttribute('aria-label', lang === 'en' ? 'Passer en français' : 'Switch to English');
-    splitHero();
   }
   btn.addEventListener('click', function(){
     lang = lang === 'fr' ? 'en' : 'fr';
@@ -23,89 +22,79 @@
     applyLang();
     if (window.ScrollTrigger) ScrollTrigger.refresh();
   });
-
-  /* ---------- Découpe du titre en lettres ---------- */
-  function splitHero(){
-    document.querySelectorAll('#heroTitle .ln').forEach(function(ln){
-      var text = ln.textContent;
-      ln.setAttribute('aria-label', text);
-      ln.innerHTML = text.split('').map(function(c){
-        return '<span class="ch" aria-hidden="true">' + (c === ' ' ? '&nbsp;' : c) + '</span>';
-      }).join('');
-    });
-  }
+  applyLang();
 
   /* ---------- Copier l'email ---------- */
   var copyBtn = document.getElementById('copyMail');
   copyBtn.addEventListener('click', function(){
-    var t = document.getElementById('mail').textContent;
+    var el = document.getElementById('mail');
     var done = function(){ var o = copyBtn.textContent; copyBtn.textContent = lang === 'en' ? 'COPIED' : 'COPIÉ'; setTimeout(function(){ copyBtn.textContent = o; }, 1600); };
-    var fallback = function(){ var r = document.createRange(); r.selectNodeContents(document.getElementById('mail')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
-    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done, fallback); else fallback();
+    var fallback = function(){ var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(el.textContent).then(done, fallback); else fallback();
   });
 
-  /* ---------- Formulaire (prototype) ---------- */
+  /* ---------- Formulaire : ouvre WhatsApp avec le message ---------- */
   document.getElementById('form').addEventListener('submit', function(e){
     e.preventDefault();
-    document.getElementById('formNote').textContent = lang === 'en'
-      ? 'Prototype: sending will be connected in the final version. Meanwhile, write to me on WhatsApp.'
-      : "Prototype : l'envoi sera branché dans la version finale. En attendant, écrivez-moi sur WhatsApp.";
+    var n = document.getElementById('f-name').value.trim();
+    var c = document.getElementById('f-contact').value.trim();
+    var m = document.getElementById('f-msg').value.trim();
+    var note = document.getElementById('note');
+    if (!n || !m){ note.textContent = lang === 'en' ? 'Add your name and a few words about your project.' : 'Indiquez votre nom et quelques mots sur votre projet.'; return; }
+    var text = (lang === 'en' ? 'Hello Ephraïm, I am ' : 'Bonjour Ephraïm, je suis ') + n + (c ? ' (' + c + ')' : '') + '.\n\n' + m;
+    window.open('https://wa.me/22892978659?text=' + encodeURIComponent(text), '_blank', 'noopener');
+    note.textContent = lang === 'en' ? 'WhatsApp opens with your message, just press send.' : 'WhatsApp s\'ouvre avec votre message : il ne reste qu\'à appuyer sur envoyer.';
   });
 
-  applyLang();
-
-  /* ---------- Parallaxe souris sur les objets ---------- */
-  if (!reduce && window.matchMedia('(pointer:fine)').matches){
-    window.addEventListener('pointermove', function(e){
-      var x = (e.clientX / innerWidth - .5) * 2, y = (e.clientY / innerHeight - .5) * 2;
-      document.documentElement.style.setProperty('--mx', x.toFixed(3));
-      document.documentElement.style.setProperty('--my', y.toFixed(3));
-    }, { passive: true });
+  /* ---------- Aperçu des projets qui suit la souris ---------- */
+  var peek = document.getElementById('peek');
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.project'));
+  rows.forEach(function(row, i){
+    var t = row.querySelector('.thumb');
+    if (!t) return;
+    var c = t.cloneNode(true);
+    c.classList.remove('thumb');
+    c.dataset.i = i;
+    peek.appendChild(c);
+  });
+  var shots = Array.prototype.slice.call(peek.children);
+  if (window.matchMedia('(pointer:fine)').matches && !reduce){
+    var x = 0, y = 0, px = 0, py = 0, raf = null;
+    var loop = function(){ px += (x - px) * .18; py += (y - py) * .18; peek.style.left = px + 'px'; peek.style.top = py + 'px'; raf = requestAnimationFrame(loop); };
+    rows.forEach(function(row, i){
+      row.addEventListener('mouseenter', function(e){
+        shots.forEach(function(s){ s.classList.toggle('on', +s.dataset.i === i); });
+        if (!raf){ px = x = e.clientX; py = y = e.clientY; loop(); }
+        peek.classList.add('on');
+      });
+      row.addEventListener('mouseleave', function(){ peek.classList.remove('on'); });
+    });
+    window.addEventListener('mousemove', function(e){ x = e.clientX + 170; y = e.clientY; }, { passive: true });
   }
 
   if (reduce || !window.gsap || !window.ScrollTrigger) return;
   gsap.registerPlugin(ScrollTrigger);
 
-  /* ---------- Entrée du hero ---------- */
-  var intro = gsap.timeline({ defaults: { ease: 'expo.out' } });
-  intro.from('#heroTitle .ch', { yPercent: 110, duration: 1.2, stagger: 0.035 })
-       .from('.hero-photo', { y: 120, scale: .94, duration: 1.4 }, 0.3)
-       .from('.hero-copy, .hero-cta', { y: 30, duration: 1 }, 0.7)
-       .from('.hero .float', { scale: 0, duration: 1.2, stagger: 0.08, ease: 'back.out(1.7)' }, 0.6)
-       .from('.top .wrap > *', { y: -20, duration: .9, stagger: .06 }, 0.2);
+  /* ---------- Entrée de la couverture ---------- */
+  var tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
+  tl.from('.name .row > span', { yPercent: 105, duration: 1.3, stagger: .12 })
+    .from('.portrait .block', { scaleY: 0, duration: 1.1, ease: 'power4.out' }, .25)
+    .from('.portrait img', { yPercent: 12, duration: 1.4 }, .4)
+    .from('.intro > *', { y: 24, duration: 1, stagger: .08 }, .6)
+    .from('.nav .wrap > *', { y: -14, duration: .8, stagger: .05 }, .2);
 
-  /* Le hero s'éloigne quand on descend */
-  var desktop = window.matchMedia('(min-width: 861px)').matches;
-  if (desktop) gsap.to('.hero .wrap', { yPercent: 8, scale: .97, ease: 'none',
-    scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 0.8 } });
+  /* Le portrait monte un peu plus lentement que la page */
+  gsap.to('.portrait img', { yPercent: -6, ease: 'none',
+    scrollTrigger: { trigger: '.cover', start: 'top top', end: 'bottom top', scrub: .6 } });
 
-  /* ---------- Titres qui se remplissent ---------- */
-  gsap.utils.toArray('.fill-title').forEach(function(t){
-    gsap.fromTo(t, { backgroundPosition: '100% 0' }, { backgroundPosition: '0% 0', ease: 'none',
-      scrollTrigger: { trigger: t, start: 'top 88%', end: 'top 38%', scrub: 0.8 } });
+  /* ---------- Apparitions douces ---------- */
+  gsap.utils.toArray('.reveal').forEach(function(el){
+    gsap.from(el, { y: 36, duration: 1.1, ease: 'expo.out',
+      scrollTrigger: { trigger: el, start: 'top bottom', once: true } });
   });
-
-  /* ---------- Parallaxe des objets au scroll ---------- */
-  gsap.utils.toArray('.float').forEach(function(el){
-    var s = parseFloat(el.dataset.speed || 1);
-    gsap.to(el, { y: -160 * s, rotate: 25 * s, ease: 'none',
-      scrollTrigger: { trigger: el.parentElement, start: 'top bottom', end: 'bottom top', scrub: 0.8 } });
-  });
-
-  /* ---------- Apparitions ---------- */
-  gsap.from('.about-text, .chips li, .about .pill', { y: 40, duration: 1, ease: 'expo.out', stagger: .04,
-    scrollTrigger: { trigger: '.about-text', start: 'top bottom', once: true } });
-  gsap.from('.svc', { y: 50, duration: 1, ease: 'expo.out', stagger: .08,
-    scrollTrigger: { trigger: '.svc-list', start: 'top bottom', once: true } });
-
-  /* ---------- Cartes de projets empilées ---------- */
-  var cards = desktop ? gsap.utils.toArray('.card') : [];
-  cards.forEach(function(card, i){
-    if (i === cards.length - 1) return;
-    gsap.to(card.querySelector('.card-in'), {
-      scale: 1 - (cards.length - i) * 0.025, filter: 'brightness(.55)', ease: 'none',
-      scrollTrigger: { trigger: cards[i + 1], start: 'top bottom', end: 'top 30%', scrub: 0.8 }
-    });
+  gsap.utils.toArray('.project').forEach(function(el){
+    gsap.from(el, { y: 40, duration: 1.1, ease: 'expo.out',
+      scrollTrigger: { trigger: el, start: 'top bottom', once: true } });
   });
 
   window.addEventListener('load', function(){ ScrollTrigger.refresh(); });

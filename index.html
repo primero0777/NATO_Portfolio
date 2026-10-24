@@ -5,331 +5,199 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Ephraïm NATO</title>
 <meta name="description" content="Ephraïm NATO, développeur fullstack & IA basé à Lomé. Sites, applications web et mobiles, intégration IA.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Archivo:wght@400;500;600;700;800&display=swap">
 <meta property="og:title" content="Ephraïm NATO — Développeur fullstack &amp; IA">
 <meta property="og:description" content="Sites, applications web et mobiles, intégration IA. Basé à Lomé, Togo.">
 <meta property="og:image" content="images/ephraim.webp">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
-<!-- Dégradés partagés des objets "pâte à modeler" -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <defs>
-    <radialGradient id="gv" cx="32%" cy="28%" r="80%"><stop offset="0" stop-color="#EBDDFF"/><stop offset=".4" stop-color="#A66BFF"/><stop offset="1" stop-color="#4316AD"/></radialGradient>
-    <radialGradient id="gp" cx="32%" cy="28%" r="80%"><stop offset="0" stop-color="#FFD6E8"/><stop offset=".42" stop-color="#FF5FA6"/><stop offset="1" stop-color="#A50E55"/></radialGradient>
-    <radialGradient id="go" cx="32%" cy="28%" r="80%"><stop offset="0" stop-color="#FFE7CF"/><stop offset=".42" stop-color="#FF8F45"/><stop offset="1" stop-color="#B04306"/></radialGradient>
-    <radialGradient id="gb" cx="32%" cy="28%" r="80%"><stop offset="0" stop-color="#DCE4FF"/><stop offset=".42" stop-color="#5470FF"/><stop offset="1" stop-color="#1A2696"/></radialGradient>
-    <radialGradient id="gl" cx="32%" cy="28%" r="80%"><stop offset="0" stop-color="#F4FFD2"/><stop offset=".42" stop-color="#A8EB3A"/><stop offset="1" stop-color="#477308"/></radialGradient>
-    <linearGradient id="gshine" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-    <symbol id="o-code" viewBox="0 0 120 100"><path d="M40 18 L10 50 L40 82" fill="none" stroke="url(#gv)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/><path d="M80 18 L110 50 L80 82" fill="none" stroke="url(#gv)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/><path d="M36 22 L18 42" stroke="#fff" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/><path d="M76 22 L94 40" stroke="#fff" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/></symbol>
-    <symbol id="o-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="31" fill="none" stroke="url(#gp)" stroke-width="24"/><path d="M28 34 A27 27 0 0 1 52 21" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="6" stroke-linecap="round"/></symbol>
-    <symbol id="o-sphere" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="url(#gb)"/><ellipse cx="36" cy="30" rx="16" ry="10" fill="url(#gshine)" transform="rotate(-28 36 30)"/></symbol>
-    <symbol id="o-star" viewBox="0 0 100 100"><path d="M50 4 C55 36 64 45 96 50 C64 55 55 64 50 96 C45 64 36 55 4 50 C36 45 45 36 50 4 Z" fill="url(#go)"/><path d="M47 18 C46 30 42 38 34 42" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="4" stroke-linecap="round"/></symbol>
-    <symbol id="o-chip" viewBox="0 0 100 100"><g stroke="url(#gl)" stroke-width="7" stroke-linecap="round"><path d="M34 6v14M50 6v14M66 6v14M34 80v14M50 80v14M66 80v14M6 34h14M6 50h14M6 66h14M80 34h14M80 50h14M80 66h14"/></g><rect x="18" y="18" width="64" height="64" rx="16" fill="url(#gl)"/><rect x="36" y="36" width="28" height="28" rx="6" fill="#2F4D05" opacity=".55"/><path d="M26 28 Q30 22 40 22" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="5" stroke-linecap="round"/></symbol>
-    <symbol id="o-bolt" viewBox="0 0 100 100"><path d="M60 4 L18 56 H46 L36 96 L84 38 H56 Z" fill="url(#go)" stroke-linejoin="round"/><path d="M54 14 L30 46" stroke="#fff" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/></symbol>
-    <symbol id="o-clover" viewBox="0 0 100 100"><g fill="url(#gl)"><circle cx="29" cy="29" r="24"/><circle cx="71" cy="29" r="24"/><circle cx="29" cy="71" r="24"/><circle cx="71" cy="71" r="24"/></g><circle cx="22" cy="20" r="7" fill="#fff" opacity=".55"/></symbol>
-  </defs>
-</svg>
 
-<header class="top">
+<header class="nav">
   <div class="wrap">
-    <a href="#top" class="logo" aria-label="Ephraïm NATO, accueil">EN<span>.</span></a>
-    <nav class="nav" aria-label="Navigation principale">
-      <a href="#apropos" data-en="ABOUT">À PROPOS</a>
-      <a href="#services" data-en="SERVICES">SERVICES</a>
-      <a href="#projets" data-en="WORK">PROJETS</a>
-      <a href="#contact" data-en="CONTACT">CONTACT</a>
+    <a href="#top" class="logo" aria-label="Ephraïm NATO, accueil">E<span>.</span>N</a>
+    <nav class="menu" aria-label="Navigation principale">
+      <a href="#travaux" data-en="Work">Travaux</a>
+      <a href="#services" data-en="Services">Services</a>
+      <a href="#apropos" data-en="About">À propos</a>
+      <a href="#contact" data-en="Contact">Contact</a>
     </nav>
-    <button class="lang" id="lang" type="button" aria-label="Switch to English"><b>FR</b> <i>/ EN</i></button>
+    <button class="lang" id="lang" type="button" aria-label="Switch to English">FR <i>/ EN</i></button>
   </div>
 </header>
 
 <main id="top">
-  <!-- HERO -->
-  <section class="hero" aria-label="Introduction">
+
+  <!-- COUVERTURE -->
+  <section class="cover" aria-label="Présentation">
     <div class="wrap">
-      <h1 class="hero-title" id="heroTitle"><span class="ln ln-sm" data-en="HI, I'M">SALUT, JE SUIS</span><span class="ln">EPHRAÏM</span></h1>
-      <div class="hero-row">
-        <div class="hero-side">
-          <p class="hero-copy" data-en="Fullstack &amp; AI developer based in Lomé. <em>I build web platforms that run real businesses.</em>">Développeur fullstack &amp; IA basé à Lomé. <em>Je construis des plateformes web qui font tourner de vrais business.</em></p>
-          <ul class="hero-stack" aria-label="Technologies principales"><li>React</li><li>Laravel</li><li>Flutter</li><li>IA</li></ul>
-        </div>
-        <figure class="hero-photo" style="margin:0">
-          <img src="images/ephraim.webp?v=3" width="673" height="1200" alt="Ephraïm NATO en costume rayé, bras croisés">
-        </figure>
-        <div class="hero-cta">
-          <span class="avail"><i aria-hidden="true"></i><span data-en="Available for new projects">Disponible pour de nouveaux projets</span></span>
-          <a href="#contact" class="pill pill-grad"><span data-en="Contact me">Me contacter</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a href="#projets" class="pill pill-ghost"><span data-en="See my work">Voir mes projets</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <h1 class="name"><span class="row"><span>Ephraïm</span></span><span class="row hollow"><span>Nato</span></span></h1>
+      <figure class="portrait">
+        <span class="block" aria-hidden="true"></span>
+        <img src="images/ephraim.webp?v=5" width="673" height="1200" alt="Portrait d'Ephraïm NATO en costume, bras croisés">
+        <figcaption>Lomé, Togo<br>6°08′N 1°13′E</figcaption>
+      </figure>
+      <div class="intro">
+        <p class="label"><span data-en="Fullstack &amp; AI developer">Développeur fullstack &amp; IA</span><span class="dot">●</span><span data-en="Co-founder, NT &amp; Co">Co-fondateur, NT &amp; Co</span></p>
+        <p class="lead" data-en="I build web platforms that run real businesses, from the first screen to the database.">Je construis des plateformes web qui font tourner de vrais business, du premier écran à la base de données.</p>
+        <div class="actions">
+          <a href="#contact" class="btn" data-en="Contact me">Me contacter</a>
+          <a href="#travaux" class="link"><span data-en="See the work">Voir les travaux</span> <span aria-hidden="true">↓</span></a>
         </div>
       </div>
     </div>
-    <span class="float" data-speed="1.2" style="left:5%;top:26%;width:clamp(48px,5.4vw,88px);height:clamp(48px,5.4vw,88px)"><svg class="obj" style="--d:28px;--t:6s" aria-hidden="true"><use href="#o-code"/></svg></span>
-    <span class="float" data-speed="0.8" style="right:7%;top:16%;width:clamp(48px,5.5vw,90px);height:clamp(48px,5.5vw,90px)"><svg class="obj" style="--d:-22px;--t:7.5s" aria-hidden="true"><use href="#o-ring"/></svg></span>
-    <span class="float hide-sm" data-speed="1.6" style="right:30%;bottom:22%;width:clamp(30px,2.8vw,48px);height:clamp(30px,2.8vw,48px)"><svg class="obj" style="--d:34px;--t:5.5s" aria-hidden="true"><use href="#o-star"/></svg></span>
-      </section>
-
-  <!-- BANDE DE NOMS -->
-  <section class="marquee" aria-label="Projets et clients">
-    <div class="marquee-track">
-      <ul><li>KALETA</li><li>FINEX PRO</li><li>CAMPUS TRAVEL H&amp;K</li><li>AFRICA WINE FOOD</li><li>MIABETRANS</li><li>ELYON AI</li><li>NT &amp; CO</li></ul>
-      <ul aria-hidden="true"><li>KALETA</li><li>FINEX PRO</li><li>CAMPUS TRAVEL H&amp;K</li><li>AFRICA WINE FOOD</li><li>MIABETRANS</li><li>ELYON AI</li><li>NT &amp; CO</li></ul>
-    </div>
   </section>
+
+  <!-- BANDE -->
+  <div class="band" aria-hidden="true">
+    <div class="band-track">
+      <ul><li>Sites web</li><li>Applications métier</li><li>Apps mobiles</li><li>Intégration IA</li><li>Automatisation</li><li>Support informatique</li></ul>
+      <ul><li>Sites web</li><li>Applications métier</li><li>Apps mobiles</li><li>Intégration IA</li><li>Automatisation</li><li>Support informatique</li></ul>
+    </div>
+  </div>
 
   <!-- À PROPOS -->
   <section class="about" id="apropos" aria-labelledby="apropos-t">
     <div class="wrap">
-      <h2 class="fill-title" id="apropos-t" data-en="ABOUT ME">À PROPOS</h2>
-      <p class="about-text" data-en="I'm <strong>Ephraïm NATO</strong>, a fullstack developer and IT technician in Lomé, co-founder of <strong>NT &amp; Co</strong>. I build complete platforms, from the database to the interface, and I add AI where it genuinely helps the business.">Je suis <strong>Ephraïm NATO</strong>, développeur fullstack et technicien informatique à Lomé, co-fondateur de <strong>NT &amp; Co</strong>. Je conçois des plateformes complètes, de la base de données à l'interface, et j'y ajoute de l'IA quand elle sert vraiment le métier.</p>
-      <ul class="chips" aria-label="Technologies">
-        <li>React</li><li>Laravel</li><li>PHP</li><li>MySQL</li><li>Node.js</li><li>Flutter</li><li>Supabase</li><li>n8n</li><li>LangChain</li><li>RAG &amp; MCP</li>
-      </ul>
-      <a href="#contact" class="pill pill-grad"><span data-en="Get my resume">Recevoir mon CV</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div class="head reveal">
+        <h2 id="apropos-t"><span data-en="About">À propos</span></h2>
+        <p class="label" data-en="Lomé — working with clients in Togo and abroad">Lomé — pour des clients au Togo et ailleurs</p>
+      </div>
+      <div class="about-grid">
+        <p class="statement reveal" data-en="I'm a developer who thinks like a business owner: a site or an app is only worth something if it <b>brings in clients</b> or <b>saves time</b>.">Je suis un développeur qui pense comme un entrepreneur&nbsp;: un site ou une app ne vaut que s'il <b>rapporte des clients</b> ou <b>fait gagner du temps</b>.</p>
+        <div class="about-side reveal">
+          <p data-en="Fullstack developer and IT technician, I design complete platforms, from the database to the interface, and add AI where it genuinely helps. I co-founded NT &amp; Co to support businesses in their digital transition.">Développeur fullstack et technicien informatique, je conçois des plateformes complètes, de la base de données à l'interface, et j'y ajoute de l'IA quand elle sert vraiment le métier. J'ai co-fondé NT &amp; Co pour accompagner les entreprises dans leur passage au numérique.</p>
+          <ul class="facts">
+            <li><span data-en="Based in">Basé à</span>Avédji, Lomé, Togo</li>
+            <li><span>Web</span>React, Laravel, PHP, MySQL, Node.js</li>
+            <li><span>Mobile</span>Flutter, Supabase</li>
+            <li><span data-en="AI">IA</span>LangChain, RAG, MCP, n8n</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <span class="float" data-speed="1.4" style="left:5%;top:18%;width:clamp(60px,7vw,120px);height:clamp(60px,7vw,120px)"><svg class="obj" style="--d:-26px;--t:6.5s" aria-hidden="true"><use href="#o-chip"/></svg></span>
-    <span class="float" data-speed="0.9" style="right:6%;top:34%;width:clamp(56px,6vw,104px);height:clamp(56px,6vw,104px)"><svg class="obj" style="--d:24px;--t:7s" aria-hidden="true"><use href="#o-ring"/></svg></span>
-    <span class="float hide-sm" data-speed="1.8" style="left:12%;bottom:12%;width:clamp(44px,4.6vw,80px);height:clamp(44px,4.6vw,80px)"><svg class="obj" style="--d:30px;--t:5.8s" aria-hidden="true"><use href="#o-sphere"/></svg></span>
-    <span class="float hide-sm" data-speed="1.2" style="right:16%;bottom:16%;width:clamp(40px,4vw,70px);height:clamp(40px,4vw,70px)"><svg class="obj" style="--d:-24px;--t:8.5s" aria-hidden="true"><use href="#o-star"/></svg></span>
   </section>
 
   <!-- SERVICES -->
-  <section class="sheet on-chalk services" id="services" aria-labelledby="services-t">
-    <div class="wrap narrow">
-      <h2 class="fill-title" id="services-t">SERVICES</h2>
-      <ul class="svc-list">
-        <li class="svc"><span class="svc-num">01</span><div><h3 data-en="Websites &amp; e-commerce">Sites vitrines &amp; e-commerce</h3><p class="svc-desc" data-en="Fast, mobile-first sites built for local connections, with quotes, orders and WhatsApp contact built in.">Des sites rapides, pensés pour le mobile et les connexions locales, avec devis, commande et contact WhatsApp intégrés.</p></div><span class="svc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></li>
-        <li class="svc"><span class="svc-num">02</span><div><h3 data-en="Business web apps">Applications web métier</h3><p class="svc-desc" data-en="Custom management platforms: bookings, inventory, dashboards. React, Laravel, MySQL, Node.js.">Plateformes de gestion sur mesure : réservations, stocks, tableaux de bord. React, Laravel, MySQL, Node.js.</p></div><span class="svc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></li>
-        <li class="svc"><span class="svc-num">03</span><div><h3 data-en="Mobile apps">Applications mobiles</h3><p class="svc-desc" data-en="Android and iOS apps with Flutter and Supabase, designed mobile-first.">Apps Android et iOS avec Flutter et Supabase, conçues pour un usage mobile d'abord.</p></div><span class="svc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></li>
-        <li class="svc"><span class="svc-num">04</span><div><h3 data-en="AI &amp; automation">Intégration IA &amp; automatisation</h3><p class="svc-desc" data-en="Smart assistants, search across your documents (RAG), n8n automations that save hours every week.">Assistants intelligents, recherche dans vos documents (RAG), automatisations n8n qui font gagner des heures chaque semaine.</p></div><span class="svc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></li>
-        <li class="svc"><span class="svc-num">05</span><div><h3 data-en="IT support &amp; maintenance">Support &amp; maintenance informatique</h3><p class="svc-desc" data-en="Setup, troubleshooting, data recovery and maintenance of your computers.">Installation, dépannage, récupération de données et maintenance de votre parc informatique.</p></div><span class="svc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></li>
+  <section class="paper services" id="services" aria-labelledby="services-t">
+    <div class="wrap">
+      <div class="head reveal">
+        <h2 id="services-t">Services</h2>
+        <p data-en="What I can build for you, from a showcase site to a complete platform.">Ce que je peux construire pour vous, du site vitrine à la plateforme complète.</p>
+      </div>
+      <ul class="svc">
+        <li class="reveal"><h3 data-en="Websites">Sites web</h3><p data-en="Showcase and e-commerce sites, fast on mobile and local connections, with quotes, orders and WhatsApp built in.">Vitrines et e-commerce rapides sur mobile et sur les connexions locales, avec devis, commande et WhatsApp intégrés.</p><span class="tagline" data-en="Showcase · E-commerce">Vitrine · E-commerce</span></li>
+        <li class="reveal"><h3 data-en="Business apps">Applications métier</h3><p data-en="Custom management platforms: bookings, inventory, payments, dashboards.">Plateformes de gestion sur mesure&nbsp;: réservations, stocks, paiements, tableaux de bord.</p><span class="tagline">React · Laravel · MySQL</span></li>
+        <li class="reveal"><h3 data-en="Mobile apps">Apps mobiles</h3><p data-en="Android and iOS apps designed mobile-first, with Mobile Money in mind.">Apps Android et iOS pensées pour le mobile d'abord, avec le Mobile Money en tête.</p><span class="tagline">Flutter · Supabase</span></li>
+        <li class="reveal"><h3 data-en="AI &amp; automation">IA &amp; automatisation</h3><p data-en="Assistants, search across your documents, automations that save hours every week.">Assistants, recherche dans vos documents, automatisations qui font gagner des heures chaque semaine.</p><span class="tagline">RAG · n8n · API Claude</span></li>
+        <li class="reveal"><h3 data-en="IT support">Support informatique</h3><p data-en="Setup, troubleshooting, data recovery and maintenance of your computers.">Installation, dépannage, récupération de données et maintenance de votre parc.</p><span class="tagline" data-en="Lomé, on site">Lomé, sur place</span></li>
       </ul>
     </div>
   </section>
 
-  <!-- PROJETS -->
-  <section class="sheet on-ink overlap projects" id="projets" aria-labelledby="projets-t">
-    <div class="wrap narrow">
-      <h2 class="fill-title" id="projets-t" data-en="WORK">PROJETS</h2>
-      <div class="stack">
-
-        <article class="card" style="--i:0"><div class="card-in">
-          <div class="card-head">
-            <div class="card-id"><span class="card-num">01</span><div><h3>MiabeTrans</h3><p class="card-sub" data-en="Intercity transport management platform">Plateforme de gestion du transport interurbain</p></div></div>
-            <a href="#projets" class="pill pill-line" data-en="View project">Voir le projet</a>
-          </div>
-          <div class="card-grid">
-            <div class="shot p-miabe">
-              <div class="ui"><div class="ui-bar"><i></i><i></i><i></i><span>miabetrans · trajets</span></div></div>
-              <div class="route"><svg viewBox="0 0 400 220" preserveAspectRatio="none" aria-hidden="true"><path d="M30 180 C110 170 120 60 200 80 S320 40 370 50" fill="none" stroke="#7FA8FF" stroke-width="4" stroke-dasharray="10 8"/><circle cx="30" cy="180" r="9" fill="#fff"/><circle cx="200" cy="80" r="7" fill="#7FA8FF"/><circle cx="370" cy="50" r="9" fill="#FF8A3D"/></svg></div>
-              <div class="ticket"><small>LOMÉ → KARA</small><b>06:30</b>Siège 14 · Bus 07<br><small>Réservation confirmée</small></div>
-            </div>
-            <div class="card-side">
-              <div class="shot p-miabe" style="background:linear-gradient(160deg,#16233F,#0D1A33)">
-                <div class="phone" style="left:50%;top:50%;transform:translate(-50%,-50%)"><div class="phone-in" style="background:#EEF3FF;color:#1C55C9">
-                  <div class="txt" style="width:60%"></div><div class="blk-d" style="background:#1C55C9;height:46px"></div>
-                  <div class="txt" style="width:80%;opacity:.4"></div><div class="txt" style="width:50%;opacity:.4"></div>
-                  <div class="blk-d" style="background:#fff;height:34px;box-shadow:0 2px 6px rgba(0,0,0,.08)"></div><div class="blk-d" style="background:#fff;height:34px;box-shadow:0 2px 6px rgba(0,0,0,.08)"></div>
-                </div></div>
-              </div>
-              <div class="facts"><p data-en="Routes, bookings, passengers, buses and drivers in one platform. My bachelor's thesis project.">Trajets, réservations, passagers, bus et chauffeurs dans une seule plateforme. Projet de mémoire de licence.</p><ul class="tags"><li>React</li><li>Laravel</li><li>MySQL</li></ul></div>
-            </div>
-          </div>
-        </div></article>
-
-        <article class="card" style="--i:1"><div class="card-in">
-          <div class="card-head">
-            <div class="card-id"><span class="card-num">02</span><div><h3>Africa Wine Food</h3><p class="card-sub" data-en="Wine &amp; spirits catalogue with online quotes">Catalogue vins &amp; spiritueux avec devis en ligne</p></div></div>
-            <a href="#projets" class="pill pill-line" data-en="View project">Voir le projet</a>
-          </div>
-          <div class="card-grid">
-            <div class="shot p-awf">
-              <div class="ui"><div class="ui-bar"><i></i><i></i><i></i><span>africawinefood · catalogue</span></div>
-                <div class="ui-body"><div class="bottles"><div class="bottle"><i></i><span class="txt"></span></div><div class="bottle"><i></i><span class="txt"></span></div><div class="bottle"><i></i><span class="txt"></span></div><div class="bottle"><i></i><span class="txt"></span></div></div>
-                <div class="quote-doc"><b>DEVIS</b><span>AWF-2026-0910-0042</span><div class="txt" style="color:#3A0D1C;opacity:.25"></div><div class="txt" style="color:#3A0D1C;opacity:.25;width:70%"></div><div class="txt" style="color:#3A0D1C;opacity:.25;width:85%"></div><span style="margin-top:auto;padding:8px;border-radius:8px;background:#25D366;color:#fff;text-align:center">WhatsApp</span></div></div>
-              </div>
-            </div>
-            <div class="card-side">
-              <div class="shot p-awf" style="background:linear-gradient(160deg,#2A0A15,#4E1022)">
-                <div class="phone" style="left:50%;top:50%;transform:translate(-50%,-50%)"><div class="phone-in" style="background:#FBF6EC;color:#7A1B35">
-                  <div class="txt" style="width:55%"></div><div class="blk-d" style="background:#7A1B35;height:60px"></div><div class="txt" style="width:80%;opacity:.35"></div><div class="txt" style="width:60%;opacity:.35"></div><div class="blk-d" style="background:#E9C77B;height:28px;margin-top:auto"></div>
-                </div></div>
-              </div>
-              <div class="facts"><p data-en="Quotes generated as PDF, sent by WhatsApp and email, archived automatically in Google Sheets.">Devis générés en PDF, envoyés par WhatsApp et email, archivés automatiquement dans Google Sheets.</p><ul class="tags"><li>JavaScript</li><li>jsPDF</li><li>EmailJS</li><li>n8n</li></ul></div>
-            </div>
-          </div>
-        </div></article>
-
-        <article class="card" style="--i:2"><div class="card-in">
-          <div class="card-head">
-            <div class="card-id"><span class="card-num">03</span><div><h3>Finex Pro</h3><p class="card-sub" data-en="Professional printing website">Site d'impression professionnelle</p></div></div>
-            <a href="#projets" class="pill pill-line" data-en="View project">Voir le projet</a>
-          </div>
-          <div class="card-grid">
-            <div class="shot p-finex">
-              <div class="ui"><div class="ui-bar"><i></i><i></i><i></i><span>finexpro · produits</span></div>
-                <div class="ui-body" style="flex-direction:column">
-                  <div style="display:flex;gap:14px;flex:1">
-                    <div class="blk" style="flex:1.3;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;gap:8px;color:#0A6C78"><div class="txt" style="width:70%;height:12px"></div><div class="txt" style="width:45%;opacity:.4"></div></div>
-                    <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:10px"><div class="blk-d"></div><div class="blk-d"></div><div class="blk-d"></div><div class="blk-d"></div></div>
-                  </div>
-                  <div class="swatches"><i style="background:#00AEEF"></i><i style="background:#EC008C"></i><i style="background:#FFF200"></i><i style="background:#111"></i></div>
-                </div>
-              </div>
-            </div>
-            <div class="card-side">
-              <div class="shot p-finex" style="background:linear-gradient(160deg,#04222A,#073F47)">
-                <div class="phone" style="left:50%;top:50%;transform:translate(-50%,-50%)"><div class="phone-in" style="background:#F2FBFC;color:#0A6C78"><div class="txt" style="width:60%"></div><div class="blk-d" style="background:#0A6C78;height:54px"></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:5px"><div class="blk-d" style="background:#CFEDEF;height:34px"></div><div class="blk-d" style="background:#CFEDEF;height:34px"></div><div class="blk-d" style="background:#CFEDEF;height:34px"></div><div class="blk-d" style="background:#CFEDEF;height:34px"></div></div></div></div>
-              </div>
-              <div class="facts"><p data-en="Product catalogue, online quote requests and order handling.">Catalogue de produits, demandes de devis en ligne et suivi des commandes.</p><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li></ul></div>
-            </div>
-          </div>
-        </div></article>
-
-        <article class="card" style="--i:3"><div class="card-in">
-          <div class="card-head">
-            <div class="card-id"><span class="card-num">04</span><div><h3>Kaleta</h3><p class="card-sub" data-en="Restaurant website redesign, Lomé">Refonte du site du restaurant, Lomé</p></div></div>
-            <a href="#projets" class="pill pill-line" data-en="View project">Voir le projet</a>
-          </div>
-          <div class="card-grid">
-            <div class="shot p-kaleta">
-              <div class="ui"><div class="ui-bar"><i></i><i></i><i></i><span>kaleta · la carte</span></div>
-                <div class="ui-body" style="align-items:center">
-                  <div style="flex:1;display:flex;flex-direction:column;gap:12px;color:#F7E3C4"><div style="font:400 clamp(20px,2.6vw,34px)/1 var(--f-display);color:#F7E3C4">KALETA</div><div class="txt" style="width:80%;opacity:.5"></div><div class="txt" style="width:60%;opacity:.5"></div><span style="align-self:flex-start;margin-top:8px;padding:9px 14px;border-radius:999px;background:#F7C873;color:#3B1F0B;font:700 11px/1 var(--f-body);letter-spacing:.08em">RÉSERVER</span></div>
-                  <div class="dish" style="width:min(44%,190px)"></div>
-                </div>
-              </div>
-            </div>
-            <div class="card-side">
-              <div class="shot p-kaleta" style="background:linear-gradient(160deg,#2A1607,#4D260B)">
-                <div class="phone" style="left:50%;top:50%;transform:translate(-50%,-50%)"><div class="phone-in" style="background:#FFF7EA;color:#9A4A12"><div class="dish" style="width:70%;align-self:center"></div><div class="txt" style="width:70%"></div><div class="txt" style="width:50%;opacity:.4"></div><div class="blk-d" style="background:#9A4A12;height:26px;margin-top:auto"></div></div></div>
-              </div>
-              <div class="facts"><p data-en="Pilot project of my offer for restaurants and local businesses.">Projet pilote de mon offre pour les restaurants et commerces locaux.</p><ul class="tags"><li>[Technos]</li></ul></div>
-            </div>
-          </div>
-        </div></article>
-
-        <article class="card" style="--i:4"><div class="card-in">
-          <div class="card-head">
-            <div class="card-id"><span class="card-num">05</span><div><h3>Elyon AI</h3><p class="card-sub" data-en="Health &amp; fitness assistant for mobile">Assistant santé &amp; fitness pensé pour le mobile</p></div></div>
-            <a href="#projets" class="pill pill-line" data-en="View project">Voir le projet</a>
-          </div>
-          <div class="card-grid">
-            <div class="shot p-elyon">
-              <div class="phone" style="left:12%;top:12%;width:34%;max-width:170px"><div class="phone-in" style="background:#F1FAF6;padding-top:20px">
-                <span class="bubble me">Programme pour 3 séances par semaine ?</span>
-                <span class="bubble ai">Voici un plan simple : lundi, mercredi, vendredi…</span>
-                <span class="bubble me">Et sans matériel ?</span>
-              </div></div>
-              <div style="position:absolute;right:8%;top:16%;width:44%;display:flex;flex-direction:column;gap:12px;color:#DFF7EC">
-                <div style="font:400 clamp(20px,2.6vw,34px)/1 var(--f-display)">ELYON</div>
-                <div class="txt" style="width:90%;opacity:.5"></div><div class="txt" style="width:70%;opacity:.5"></div>
-                <div style="display:flex;gap:8px;margin-top:8px"><span class="blk-d" style="width:44px;height:44px;background:rgba(255,255,255,.18)"></span><span class="blk-d" style="width:44px;height:44px;background:rgba(255,255,255,.18)"></span><span class="blk-d" style="width:44px;height:44px;background:rgba(255,255,255,.18)"></span></div>
-              </div>
-            </div>
-            <div class="card-side">
-              <div class="shot p-elyon" style="background:linear-gradient(160deg,#08201A,#0C3A2B);display:grid;place-items:center">
-                <svg viewBox="0 0 100 100" width="48%" aria-hidden="true"><use href="#o-chip"/></svg>
-              </div>
-              <div class="facts"><p data-en="Chat assistant MVP adapted to the African mobile-first context.">MVP d'assistant conversationnel adapté au contexte mobile africain.</p><ul class="tags"><li>Flutter</li><li>Supabase</li><li>API Claude</li></ul></div>
-            </div>
-          </div>
-        </div></article>
-
-        <article class="card" style="--i:5"><div class="card-in">
-          <div class="card-head">
-            <div class="card-id"><span class="card-num">06</span><div><h3>Campus Travel H&amp;K</h3><p class="card-sub" data-en="Website for an international mobility agency">Site d'une agence de mobilité internationale</p></div></div>
-            <a href="#projets" class="pill pill-line" data-en="View project">Voir le projet</a>
-          </div>
-          <div class="card-grid">
-            <div class="shot p-campus">
-              <div class="ui"><div class="ui-bar"><i></i><i></i><i></i><span>campustravel · destinations</span></div></div>
-              <svg class="plane-path" viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M40 200 Q200 20 360 110" fill="none" stroke="#C9B5FF" stroke-width="3" stroke-dasharray="8 8"/><circle cx="40" cy="200" r="8" fill="#fff"/><circle cx="360" cy="110" r="8" fill="#FF8A3D"/></svg>
-              <div style="position:absolute;left:18px;bottom:18px;display:flex;gap:10px;flex-wrap:wrap">
-                <span style="padding:9px 14px;border-radius:999px;background:#fff;color:#2B1250;font:700 11px/1 var(--f-body);letter-spacing:.06em">ÉTUDES</span>
-                <span style="padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.18);color:#fff;font:700 11px/1 var(--f-body);letter-spacing:.06em">VISA</span>
-                <span style="padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.18);color:#fff;font:700 11px/1 var(--f-body);letter-spacing:.06em">EMPLOI</span>
-              </div>
-            </div>
-            <div class="card-side">
-              <div class="shot p-campus" style="background:linear-gradient(160deg,#1D0B38,#3A1A80);display:grid;place-items:center">
-                <svg viewBox="0 0 100 100" width="44%" aria-hidden="true"><use href="#o-sphere"/></svg>
-              </div>
-              <div class="facts"><p data-en="Showcase site presenting the agency's study, visa and job support services.">Site vitrine qui présente l'accompagnement études, visa et emploi de l'agence.</p><ul class="tags"><li>[Technos]</li></ul></div>
-            </div>
-          </div>
-        </div></article>
-
+  <!-- TRAVAUX -->
+  <section class="work" id="travaux" aria-labelledby="travaux-t">
+    <div class="wrap">
+      <div class="head reveal">
+        <h2 id="travaux-t"><span data-en="Selected">Travaux</span> <em data-en="work">choisis</em></h2>
+        <p data-en="Client sites, business platforms and my own products.">Sites clients, plateformes métier et produits personnels.</p>
       </div>
+      <ol class="projects" id="projects">
+        <li class="project"><a href="https://github.com/primero0777/MiabeTrans" target="_blank" rel="noopener">
+          <span class="p-num">01</span><span class="p-name">MiabeTrans</span>
+          <span class="p-what" data-en="Intercity bus booking platform<small>React · Laravel · MySQL — bachelor's thesis</small>">Plateforme de réservation de transport interurbain<small>React · Laravel · MySQL — mémoire de licence</small></span>
+          <span class="p-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="thumb shot" aria-hidden="true"><img src="images/projets/miabetrans.webp?v=5" alt="" width="1200" height="750" loading="lazy"></span>
+        </a></li>
+        <li class="project"><a href="https://vendrixfit.netlify.app" target="_blank" rel="noopener">
+          <span class="p-num">02</span><span class="p-name">Vendrix</span>
+          <span class="p-what" data-en="Tracking app for coaches and gyms<small>Flutter · Supabase · AI — CTO</small>">App de suivi pour coachs et salles de sport<small>Flutter · Supabase · IA — CTO</small></span>
+          <span class="p-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="thumb shot" aria-hidden="true"><img src="images/projets/vendrix.webp?v=5" alt="" width="1200" height="750" loading="lazy"></span>
+        </a></li>
+        <li class="project"><a href="https://www.africawinespiritsfood.com" target="_blank" rel="noopener">
+          <span class="p-num">03</span><span class="p-name">Africa Wine Food</span>
+          <span class="p-what" data-en="Wine &amp; spirits agency, catalogue and online quotes<small>JavaScript · jsPDF · EmailJS · n8n</small>">Agence de vins &amp; spiritueux, catalogue et devis en ligne<small>JavaScript · jsPDF · EmailJS · n8n</small></span>
+          <span class="p-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="thumb shot" aria-hidden="true"><img src="images/projets/africa-wine-food.webp?v=5" alt="" width="1200" height="750" loading="lazy"></span>
+        </a></li>
+        <li class="project"><a href="https://travelsadvisers.com" target="_blank" rel="noopener">
+          <span class="p-num">04</span><span class="p-name">Travels Advisers</span>
+          <span class="p-what" data-en="International mobility agency, Lomé<small>Showcase site · 6 destinations · FR/EN</small>">Agence de mobilité internationale, Lomé<small>Site vitrine · 6 destinations · FR/EN</small></span>
+          <span class="p-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="thumb shot" aria-hidden="true"><img src="images/projets/travels-advisers.webp?v=5" alt="" width="1200" height="750" loading="lazy"></span>
+        </a></li>
+        <li class="project"><a href="https://github.com/primero0777/finex-printing-platform" target="_blank" rel="noopener">
+          <span class="p-num">05</span><span class="p-name">Finex Pro</span>
+          <span class="p-what" data-en="Professional printing, services and quotes<small>HTML · CSS · JavaScript</small>">Imprimerie professionnelle, services et devis<small>HTML · CSS · JavaScript</small></span>
+          <span class="p-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="thumb shot" aria-hidden="true"><img src="images/projets/finex-pro.webp?v=5" alt="" width="1200" height="750" loading="lazy"></span>
+        </a></li>
+        <li class="project"><a href="https://github.com/primero0777/ALA_GROUP" target="_blank" rel="noopener">
+          <span class="p-num">06</span><span class="p-name">ALA Group</span>
+          <span class="p-what" data-en="Archiram Building, architecture &amp; construction<small>HTML · CSS · JavaScript</small>">Archiram Building, architecture &amp; construction<small>HTML · CSS · JavaScript</small></span>
+          <span class="p-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="thumb shot" aria-hidden="true"><img src="images/projets/archiram.webp?v=5" alt="" width="1200" height="750" loading="lazy"></span>
+        </a></li>
+      </ol>
     </div>
   </section>
 
-  <!-- TÉMOIGNAGES -->
-  <section class="testi on-ink" aria-labelledby="testi-t" style="position:relative;z-index:2">
+  <!-- MÉTHODE -->
+  <section class="paper method" aria-labelledby="methode-t">
     <div class="wrap">
-      <h2 id="testi-t" data-en="WHAT CLIENTS SAY">CE QU'ILS<br>EN DISENT</h2>
-      <div class="testi-grid">
-        <figure class="t-card"><div><span class="t-tag" data-en="To collect">À récupérer</span><blockquote data-en="[2 or 3 sentences from a real client about the result of the project.]">[2 ou 3 phrases d'un vrai client sur le résultat obtenu.]</blockquote></div><figcaption class="t-who"><span class="t-av" aria-hidden="true"></span><span><b>[Nom du client]</b><span>[Rôle, entreprise]</span></span></figcaption></figure>
-        <figure class="t-card"><div><span class="t-tag" data-en="To collect">À récupérer</span><blockquote data-en="[2 or 3 sentences from a real client about the result of the project.]">[2 ou 3 phrases d'un vrai client sur le résultat obtenu.]</blockquote></div><figcaption class="t-who"><span class="t-av" aria-hidden="true"></span><span><b>[Nom du client]</b><span>[Rôle, entreprise]</span></span></figcaption></figure>
-        <figure class="t-card"><div><span class="t-tag" data-en="To collect">À récupérer</span><blockquote data-en="[2 or 3 sentences from a real client about the result of the project.]">[2 ou 3 phrases d'un vrai client sur le résultat obtenu.]</blockquote></div><figcaption class="t-who"><span class="t-av" aria-hidden="true"></span><span><b>[Nom du client]</b><span>[Rôle, entreprise]</span></span></figcaption></figure>
+      <div class="head reveal">
+        <h2 id="methode-t"><span data-en="Method">Méthode</span></h2>
+        <p data-en="Four steps, the same for a showcase site or a complete platform.">Quatre étapes, les mêmes pour un site vitrine ou une plateforme complète.</p>
       </div>
+      <ol class="steps">
+        <li class="reveal"><b>01</b><h3 data-en="Listen">Écoute</h3><p data-en="We define your goal, your clients and what the project must bring in.">On définit votre objectif, vos clients et ce que le projet doit rapporter.</p></li>
+        <li class="reveal"><b>02</b><h3 data-en="Design">Maquette</h3><p data-en="You see the screens before a single line of code, and we adjust together.">Vous voyez les écrans avant la première ligne de code, et on ajuste ensemble.</p></li>
+        <li class="reveal"><b>03</b><h3 data-en="Build">Développement</h3><p data-en="Weekly deliveries you can test on your own phone.">Des livraisons chaque semaine, à tester sur votre propre téléphone.</p></li>
+        <li class="reveal"><b>04</b><h3 data-en="Launch &amp; follow-up">Mise en ligne &amp; suivi</h3><p data-en="Hosting, training, then maintenance so it keeps running.">Hébergement, prise en main, puis maintenance pour que tout continue de tourner.</p></li>
+      </ol>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="sheet on-chalk contact" id="contact" aria-labelledby="contact-t">
-    <div class="wrap narrow">
-      <div class="contact-grid">
-        <div>
-          <h2 id="contact-t" data-en="LET'S TALK ABOUT YOUR PROJECT">PARLONS DE VOTRE PROJET</h2>
-          <p class="contact-lead" data-en="A website, an app or an idea that's still fuzzy? I reply within 24 hours.">Un site, une app ou une idée encore floue ? Je réponds sous 24 h.</p>
-          <div class="ways">
-            <div class="way"><small>EMAIL</small><span id="mail">ephraimnato17@gmail.com</span><button class="copy" type="button" id="copyMail" data-en="COPY">COPIER</button></div>
-            <div class="way"><small>WHATSAPP</small><a href="https://wa.me/22892978659" target="_blank" rel="noopener">+228 92 97 86 59</a></div>
-            <div class="way"><small>TELEGRAM</small><a href="https://t.me/El_primero177" target="_blank" rel="noopener">@El_primero177</a></div>
-          </div>
-        </div>
-        <form class="form" id="form" novalidate>
-          <div class="field"><label for="f-name" data-en="Name">Nom</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Votre nom" data-en-ph="Your name"></div>
-          <div class="field"><label for="f-mail" data-en="Email or WhatsApp">Email ou WhatsApp</label><input id="f-mail" name="contact" type="text" autocomplete="email" placeholder="vous@exemple.com" data-en-ph="you@example.com"></div>
-          <div class="field"><label for="f-msg" data-en="Your project">Votre projet</label><textarea id="f-msg" name="message" rows="3" placeholder="Décrivez votre besoin en quelques lignes" data-en-ph="Describe what you need in a few lines"></textarea></div>
-          <button class="pill pill-grad" type="submit"><span data-en="Send">Envoyer</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-          <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
-        </form>
+  <section class="contact" id="contact" aria-labelledby="contact-t">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <h2 class="big" id="contact-t"><span data-en="Let's talk">Parlons</span><br><em data-en="about your project.">de votre projet.</em></h2>
+        <div class="mail"><span id="mail">ephraimnato17@gmail.com</span><button class="copy" id="copyMail" type="button" data-en="COPY">COPIER</button></div>
+        <ul class="reach">
+          <li><a href="https://wa.me/22892978659" target="_blank" rel="noopener">WhatsApp · +228 92 97 86 59</a></li>
+          <li><a href="https://t.me/El_primero177" target="_blank" rel="noopener">Telegram · @El_primero177</a></li>
+          <li><a href="https://github.com/primero0777" target="_blank" rel="noopener">GitHub · primero0777</a></li>
+        </ul>
       </div>
+      <form class="form reveal" id="form" novalidate>
+        <div class="field"><label for="f-name" data-en="Name">Nom</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Votre nom" data-en-ph="Your name"></div>
+        <div class="field"><label for="f-contact" data-en="Email or WhatsApp">Email ou WhatsApp</label><input id="f-contact" name="contact" type="text" autocomplete="email" placeholder="vous@exemple.com" data-en-ph="you@example.com"></div>
+        <div class="field"><label for="f-msg" data-en="Your project">Votre projet</label><textarea id="f-msg" name="message" rows="3" placeholder="Quelques lignes sur votre besoin" data-en-ph="A few lines about what you need"></textarea></div>
+        <button class="btn" type="submit" data-en="Send">Envoyer</button>
+        <p class="note" id="note" role="status" aria-live="polite"></p>
+      </form>
     </div>
-    <span class="float" data-speed="1.1" style="right:5%;top:8%;width:clamp(56px,6vw,110px);height:clamp(56px,6vw,110px)"><svg class="obj" style="--d:22px;--t:6.5s" aria-hidden="true"><use href="#o-bolt"/></svg></span>
-    <span class="float hide-sm" data-speed="1.5" style="left:44%;bottom:10%;width:clamp(44px,4.6vw,84px);height:clamp(44px,4.6vw,84px)"><svg class="obj" style="--d:-26px;--t:7.2s" aria-hidden="true"><use href="#o-clover"/></svg></span>
   </section>
 </main>
 
-<footer class="sheet on-ink overlap foot">
+<footer class="foot">
   <div class="wrap">
-    <div class="foot-top">
-      <p class="foot-name">EPHRAÏM<br>NATO</p>
-      <div class="foot-cols">
-        <div><b data-en="SOCIAL">RÉSEAUX</b><a href="https://github.com/primero0777" target="_blank" rel="noopener">GitHub</a><a href="https://t.me/El_primero177" target="_blank" rel="noopener">Telegram</a><a href="https://wa.me/22892978659" target="_blank" rel="noopener">WhatsApp</a></div>
-        <div><b>CONTACT</b><span>ephraimnato17@gmail.com</span><span>+228 92 97 86 59</span><span>Avédji, Lomé, Togo</span></div>
-      </div>
+    <p class="foot-name" aria-hidden="true">Ephraïm Nato</p>
+    <div class="foot-row">
+      <span>© 2026 Ephraïm NATO · NT &amp; Co · <span data-en="Lomé, Togo">Lomé, Togo</span></span>
+      <nav aria-label="Liens"><a href="https://github.com/primero0777" target="_blank" rel="noopener">GitHub</a><a href="https://wa.me/22892978659" target="_blank" rel="noopener">WhatsApp</a><a href="https://t.me/El_primero177" target="_blank" rel="noopener">Telegram</a><a href="#top" data-en="Back to top ↑">Haut de page ↑</a></nav>
     </div>
-    <div class="shapes" aria-hidden="true">
-      <svg viewBox="0 0 100 100"><use href="#o-star"/></svg>
-      <svg viewBox="0 0 100 100"><use href="#o-clover"/></svg>
-      <svg viewBox="0 0 100 100"><path d="M18 96 V50 A32 32 0 0 1 82 50 V96 H62 V50 A12 12 0 0 0 38 50 V96 Z" fill="#E6E6EA"/></svg>
-      <svg viewBox="0 0 100 100"><use href="#o-sphere"/></svg>
-      <svg viewBox="0 0 100 100"><path d="M8 8 L50 50 L8 92 H40 L82 50 L40 8 Z" fill="#E6E6EA"/></svg>
-      <svg viewBox="0 0 100 100"><use href="#o-ring"/></svg>
-      <svg viewBox="0 0 100 100"><path d="M50 4 L94 48 H66 V96 H34 V48 H6 Z" fill="#E6E6EA"/></svg>
-      <svg viewBox="0 0 120 100"><use href="#o-code"/></svg>
-    </div>
-    <div class="foot-bottom"><span>© 2026 Ephraïm NATO · NT &amp; Co</span><span data-en="Designed and built in Lomé">Conçu et développé à Lomé</span></div>
   </div>
 </footer>
 
+<div class="peek" id="peek" aria-hidden="true"></div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="script.js?v=3"></script>
+<script src="script.js?v=5"></script>
 </body>
 </html>
